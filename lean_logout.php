@@ -1,0 +1,20 @@
+<?php
+//必ずsession_startは最初に記述
+session_start();
+
+//ステップ①：SESSIONを初期化（空っぽにする）
+$_SESSION = array();
+
+//ステップ②：Cookieに保存してある"SessionIDの保存期間を過去にして破棄（昔のものにすると使えなくなる）
+if (isset($_COOKIE[session_name()])) { //session_name()は、セッションID名を返す関数
+    setcookie(session_name(), '', time()-42000, '/');
+}
+
+//サーバ側での、セッションIDの破棄//unsetは自分のき
+session_destroy();
+
+//処理後、index.phpへリダイレクト
+header("Location: lean_login.php");
+exit();
+
+?>
