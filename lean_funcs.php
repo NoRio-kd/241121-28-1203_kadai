@@ -19,16 +19,7 @@ function db_conn(){
             exit('DB Connection Error:'.$e->getMessage());
         }
 
-    
-        // try {
-        //     $db_name = "norikikadowaki_unit2";    //データベース名（一番上の階層）
-        //     $db_id   = "norikikadowaki_unit2";      //アカウント名
-        //     $db_pw   = "kadai_1128";          //パスワード：XAMPPはパスワード無し or MAMPはパスワード”root”に修正してください。
-        //     $db_host = "mysql80.norikikadowaki.sakura.ne.jp"; //DBホスト
-        //     return new PDO('mysql:dbname='.$db_name.';charset=utf8;host='.$db_host, $db_id, $db_pw);
-        // } catch (PDOException $e) {
-        //     exit('DB Connection Error:'.$e->getMessage());
-        // }
+
         
 }
 
